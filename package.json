@@ -1,0 +1,11 @@
+{
+  "name": "jsoncommandmaker",
+  "version": "1.0.0",
+  "description": "A web form to store linux commands in JSON format for future extraction.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ike Maldonado",
+  "license": "ISC"
+}
