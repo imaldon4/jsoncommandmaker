@@ -1,0 +1,32 @@
+<h1 class="text-center mb-3"> {{title}}</h1>
+<form action="/api/posts" method="POST" class="mb-4">
+    <div class="form-group">
+        <label for="command">Command</label>
+        <input type="text" name="command" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" name="description" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="parameters">Parameters</label>
+        <input type="text" name="parameters" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="attributes">Attributes</label>
+        <input type="text" name="attributes" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="examples">Examples</label>
+        <input type="text" name="examples" class="form-control">
+    </div>
+    <input type="submit" value="Add Post" class="btn btn-primary btn-block" />
+</form>
+<a href="/api/posts" class="btn btn-primary mt-4">Visit API</a>
+<ul class="list-group">
+    {{#each posts}}
+    <li class="list-group-item">
+        {{this.command}} {{this.description}} {{this.parameters}} {{this.attributes}} {{this.examples}}
+    </li>
+    {{/each}}
+</ul>
